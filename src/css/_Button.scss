@@ -1,0 +1,60 @@
+
+@mixin btn-style ($bg-color, $text-color, $border-color, $hover-bg-color, $hover-text-color, $hover-border-color) {
+  width: 100%;
+  height: 40px;
+  border-radius: 30px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.3s all ease-out;
+  background-color: $bg-color;
+  color: $text-color;
+  border: 2px solid $border-color;
+
+  &:hover {
+    background-color: $hover-bg-color;
+    color: $hover-text-color;
+    border: 2px solid $hover-border-color;
+  }
+
+}
+
+.btn {
+  @include btn-style ($color-primary, $constant-white, $color-primary, $color-secondary, $constant-white, $color-secondary)
+}
+
+.btn.outline {
+  @include btn-style ($transparent, $color-primary, $color-primary, $color-primary, $constant-white, $color-primary)
+}
+
+.btn.warning {
+  @include btn-style ($warning, $constant-white, $warning, $error, $constant-white, $error)
+}
+
+.btn.success {
+  @include btn-style ($success, $constant-white, $success, $success-secondary, $constant-white, $success-secondary)
+}
+
+.btn.icon-btn {
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  border-radius: 50%;
+  font-weight: 400;
+  display: inline-block;
+  margin-left: 50%;
+  padding-top: 5px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: 0.3s all ease-out;
+}
+
+.btn.icon-btn:hover {
+  background-color: $background-secondary;
+  color: $text;
+  border: 1px solid $color-primary;
+}
+

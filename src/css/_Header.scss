@@ -1,0 +1,24 @@
+
+@mixin Header {
+  color: $title;
+}
+
+.header {
+  @include Header
+}
+
+.header.primary {
+  color: $color-primary;
+}
+
+.header.thin {
+ font-weight: 400;
+}
+
+.header.success {
+  color: $success;
+}
+
+.header.error {
+  color: $error;
+}

@@ -1,0 +1,129 @@
+
+// LIGHT-MODE COLOR-SCHEME
+$color-primary: #4caf50;
+$color-secondary: #2e7d30;
+$background-primary: #ffffff;
+$background-secondary: #ffffff;
+$title: #242424;
+$text: #333;
+$text-secondary: #0f0f0f;
+$box-shadow: #d9d9d9;
+$transparent: transparent;
+$border-outline: #79797938;
+$constant-white: #fff;
+$success: #2e5ad5;
+$success-secondary: #224ab9;
+$error: #b92e2e;
+$warning: #942d2d;
+$info: #b7cfe6;
+
+// DARK-MODE COLOR
+$color-primary-dark: #4caf50;
+$color-secondary-dark: #2e7d30;
+$background-primary-dark: #1c1c1c;
+$background-secondary-dark: #2c2c2c;
+$title-dark: #ffffffde;
+$text-dark: #a5a5a5;
+$text-secondary-dark: #888;
+$box-shadow-dark: #1a1a1a;
+$transparent-dark: transparent;
+$border-outline-dark: #ffffff2d;
+$constant-white-dark: #fff;
+$success-dark: #039d21;
+$success-secondary-dark: #224ab9;
+$error-dark: #b92e2e;
+$warning-dark: #942d2d;
+$info-dark: #5b5b5b;
+
+
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-primary: #{$color-primary-dark};
+    --color-secondary: #{$color-secondary-dark};
+    --background-primary: #{$background-primary-dark};
+    --background-secondary: #{$background-secondary-dark};
+    --title: #{$title-dark};
+    --text: #{$text-dark};
+    --text-secondary: #{$text-secondary-dark};
+    --box-shadow: #{$box-shadow-dark};
+    --transparent: #{$transparent-dark};
+    --border-outline: #{$border-outline-dark};
+    --constant-white: #{$constant-white-dark};
+    --success: #{$success-dark};
+    --success-secondary: #{$success-secondary-dark};
+    --error: #{$error-dark};
+    --warning: #{$warning-dark};
+    --info: #{$info-dark};
+  }
+}
+
+
+.light {
+  body {
+    background-color: $background-primary;
+    transition: all 0.2s ease;
+  }
+  .card {
+    background-color: $background-primary;
+    box-shadow: 0px 0px 10px 4px $box-shadow;
+  }
+  .text-input {
+    color: $text;
+    background-color: $transparent;
+    border: 1px solid $border-outline; 
+  }
+  .header {
+    color: $title;
+  }
+  .sub-text {
+    color: $text;
+  }
+  .btn.icon-btn {
+    background-color: $background-secondary;
+    border: 1px solid $background-secondary;
+    box-shadow: 0px 0px 16px -2px $box-shadow;
+    color: $text;
+  }
+  .btn.icon-btn:hover {
+    background-color: $background-secondary;
+    color: $text;
+    border: 1px solid $color-primary;
+  }
+  
+}
+
+.dark {
+  body {
+    background-color: var(--background-primary);
+    transition: all 0.2s ease;
+    color: var(--text);
+  }
+  .card {
+    background-color: var(--background-secondary);
+    box-shadow: 0px 0px 10px 4px var(--box-shadow);
+  }
+  .text-input {
+    background-color: var(--transparent);
+    border: 1px solid var(--border-outline);
+    color: var(--text);
+  }
+  .header {
+    color: var(--title);
+  }
+  .sub-text {
+    color: var(--text);
+  }
+  .btn.icon-btn {
+    background-color: var(--background-secondary);
+    border: 1px solid var(--background-secondary);
+    box-shadow: 0px 0px 16px -2px var(--box-shadow);
+    color: var(--text);
+  }
+  .btn.icon-btn:hover {
+    background-color: var(--background-secondary);
+    color: var(--text);
+    border: 1px solid var(--color-primary);
+  }
+
+}

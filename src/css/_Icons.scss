@@ -1,0 +1,31 @@
+
+@mixin iconStyle ($icon-color) {
+  font-size: 18px;
+  color: $icon-color;
+  padding: 5px 10px;
+}
+
+.i {
+  @include iconStyle ($text)
+}
+
+.i.primary {
+  @include iconStyle ($color-primary)
+}
+
+.i.success {
+  @include iconStyle ($success)
+}
+
+.i.error {
+  @include iconStyle ($error)
+}
+
+
+// .i.moonIcon {
+//   color: $error;
+// }
+
+// .i.sunIcon {
+//   color: $primary;
+// }

@@ -1,0 +1,28 @@
+
+@mixin SubText {
+  color: $text;
+  font-weight: 400;
+  font-size: 13px;
+}
+
+.sub-text {
+  @include SubText
+}
+
+.sub-text.primary {
+  color: $color-primary;
+}
+
+.sub-text.bold {
+ font-weight: 500;
+}
+
+.sub-text.success {
+  color: $success;
+}
+
+.sub-text.error {
+  color: $error;
+}
+
+
